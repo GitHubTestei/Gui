@@ -1,0 +1,98 @@
+-- Made by CreateASP
+local ScreenGui = Instance.new("ScreenGui")
+local main = Instance.new("Frame")
+local title = Instance.new("TextLabel")
+local InfiniteYield = Instance.new("TextButton")
+local CmdX = Instance.new("TextButton")
+local close = Instance.new("TextButton")
+local openmain = Instance.new("Frame")
+local open = Instance.new("TextButton")
+
+--Properties:
+
+ScreenGui.Parent = game.CoreGui
+
+main.Name = "main"
+main.Parent = ScreenGui
+main.BackgroundColor3 = Color3.fromRGB(169, 255, 250)
+main.Position = UDim2.new(0.0291878171, 0, 0.693069279, 0)
+main.Size = UDim2.new(0, 186, 0, 110)
+main.Visible = false
+main.Active = true
+main.Draggable = true
+
+title.Name = "title"
+title.Parent = main
+title.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+title.Size = UDim2.new(0, 186, 0, 37)
+title.Font = Enum.Font.SciFi
+title.Text = "Yuki's gui."
+title.TextColor3 = Color3.fromRGB(0, 0, 0)
+title.TextSize = 14.000
+
+InfiniteYield.Name = "InfiniteYield"
+InfiniteYield.Parent = main
+InfiniteYield.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+InfiniteYield.Position = UDim2.new(0.0537634417, 0, 0.590909123, 0)
+InfiniteYield.Size = UDim2.new(0, 64, 0, 13)
+InfiniteYield.Font = Enum.Font.Kalam
+InfiniteYield.Text = "Infinite Yield"
+InfiniteYield.TextColor3 = Color3.fromRGB(0, 0, 0)
+InfiniteYield.TextScaled = true
+InfiniteYield.TextSize = 14.000
+InfiniteYield.TextWrapped = true
+InfiniteYield.MouseButton1Down:connect(function()
+	loadstring(game:HttpGet('https://raw.githubusercontent.com/EdgeIY/infiniteyield/master/source'))()
+end)
+
+CmdX.Name = "Cmd-X"
+CmdX.Parent = main
+CmdX.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+CmdX.Position = UDim2.new(0.602150559, 0, 0.590909123, 0)
+CmdX.Size = UDim2.new(0, 64, 0, 13)
+CmdX.Font = Enum.Font.Kalam
+CmdX.Text = "Cmd-X"
+CmdX.TextColor3 = Color3.fromRGB(0, 0, 0)
+CmdX.TextSize = 14.000
+CmdX.MouseButton1Down:connect(function()
+	loadstring(game:HttpGet("https://raw.githubusercontent.com/CMD-X/CMD-X/master/Source",true))()
+end)
+
+close.Name = "close"
+close.Parent = main
+close.BackgroundColor3 = Color3.fromRGB(170, 0, 0)
+close.Position = UDim2.new(0.827956975, 0, 0, 0)
+close.Size = UDim2.new(0, 32, 0, 37)
+close.Font = Enum.Font.SourceSans
+close.Text = "X"
+close.TextColor3 = Color3.fromRGB(0, 0, 0)
+close.TextScaled = true
+close.TextSize = 14.000
+close.TextWrapped = true
+close.MouseButton1Down:connect(function()
+	main.Visible = false
+	openmain.Visible = true
+end)
+
+openmain.Name = "openmain"
+openmain.Parent = ScreenGui
+openmain.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+openmain.Position = UDim2.new(0.00253807101, 0, 0.491089106, 0)
+openmain.Size = UDim2.new(0, 78, 0, 28)
+openmain.Active = true
+openmain.Draggable = true
+
+open.Name = "open"
+open.Parent = openmain
+open.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+open.Size = UDim2.new(0, 78, 0, 28)
+open.Font = Enum.Font.Kalam
+open.Text = "OPEN"
+open.TextColor3 = Color3.fromRGB(0, 0, 0)
+open.TextScaled = true
+open.TextSize = 14.000
+open.TextWrapped = true
+open.MouseButton1Down:connect(function()
+	openmain.Visible = false
+	main.Visible = true
+end)
